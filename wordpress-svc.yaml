@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: wordpress-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: wordpress
+  ports:
+  - port: 80
+    targetPort: 80
